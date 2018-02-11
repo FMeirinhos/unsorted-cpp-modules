@@ -24,7 +24,7 @@ template <typename T, size_t... Dim> class Tensor : public T {
 
 public:
   /// Ctor
-  Tensor(T &data) : _t(data) {
+  Tensor(T &container) : _t(container) {
     // Assert Dimensions
     assert(strider<Dim...>::total_size == _t.size());
   }
